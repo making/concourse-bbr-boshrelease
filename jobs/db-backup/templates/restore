@@ -4,4 +4,4 @@ set -e
 
 PATH=/var/vcap/packages/postgresql_9.3/bin:$PATH
 
-psql -U atc -f $BBR_ARTIFACT_DIRECTOR/atc.backup 
+psql -U atc -f $BBR_ARTIFACT_DIRECTORY/atc.backup 
