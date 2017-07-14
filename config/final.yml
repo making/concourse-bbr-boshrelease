@@ -1,4 +1,4 @@
-name: concourse-bbr-boshrelease
+final_name: concourse-bbr-boshrelease
 blobstore:
   provider: s3
   options:
