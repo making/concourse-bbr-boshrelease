@@ -1,0 +1,11 @@
+---
+packages: []
+jobs:
+- name: db-backup
+  version: 5e98a64e4e08092eb0d5f5bf3cc292fc06f806a9
+  fingerprint: 5e98a64e4e08092eb0d5f5bf3cc292fc06f806a9
+  sha1: 79478889829850d94bf7a2d7348f730279409fe4
+commit_hash: 2eb21a8d
+uncommitted_changes: false
+name: concourse-bbr-boshrelease
+version: 0.1.0
