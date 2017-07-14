@@ -6,4 +6,4 @@ blobstore:
     bucket_name: concourse-bbr-boshrelease
     region: ap-northeast-1
     endpoint: https://s3-ap-northeast-1.amazonaws.com
-final_name: concourse-bbr-boshrelease
+final_name: concourse-bbr
