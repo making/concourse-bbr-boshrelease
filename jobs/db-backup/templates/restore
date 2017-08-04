@@ -4,4 +4,4 @@ set -e
 
 PATH=/var/vcap/packages/postgresql_9.3/bin:$PATH
 
-psql -U atc -f $BBR_ARTIFACT_DIRECTORY/atc.backup 
+pg_restore --user=atc --format=custom --schema=public --clean --dbname=atc $BBR_ARTIFACT_DIRECTORY/atc.backup 
