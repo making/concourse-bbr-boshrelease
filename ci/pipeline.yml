@@ -143,7 +143,8 @@ jobs:
       put: slack-alert
       params:
         <<: *SLACK_SUCCESS
-- name: bump-to-next-minor-version
+
+- name: bump-to-next-patch-version
   plan:
   - aggregate:
     - get: repo-prod
@@ -154,7 +155,7 @@ jobs:
       resource: repo-dev
     - get: repo-version
       params:
-        bump: minor
+        bump: patch
     - get: utils
   - task: merge-master-to-develop
     params:
@@ -175,6 +176,34 @@ jobs:
       put: slack-alert
       params:
         <<: *SLACK_FAILURE
+  - put: repo-version
+    params:
+      file: repo-version/number
+    on_failure:
+      put: slack-alert
+      params:
+        <<: *SLACK_FAILURE
+
+- name: bump-to-next-minor-version
+  plan:
+  - aggregate:
+    - get: repo-version
+      params:
+        bump: minor
+  - put: repo-version
+    params:
+      file: repo-version/number
+    on_failure:
+      put: slack-alert
+      params:
+        <<: *SLACK_FAILURE
+
+- name: bump-to-next-major-version
+  plan:
+  - aggregate:
+    - get: repo-version
+      params:
+        bump: major
   - put: repo-version
     params:
       file: repo-version/number
