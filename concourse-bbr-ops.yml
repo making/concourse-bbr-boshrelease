@@ -1,0 +1,19 @@
+- type: replace
+  path: /releases/-
+  value:
+    name: concourse-bbr
+    version: 0.5.0
+    url: https://github.com/making/concourse-bbr-boshrelease/releases/download/0.5.0/concourse-bbr-0.5.0.tgz
+    sha1: bb4f2c9fd781e32a84fe1386599cfa691adcfeb8
+
+- type: replace
+  path: /instance_groups/jobs/name=atc/jobs/-
+  value:
+    name: atc-lock
+    release: concourse-bbr
+
+- type: replace
+  path: /instance_groups/jobs/name=db/jobs/-
+  value:
+    name: db-backup
+    release: concourse-bbr

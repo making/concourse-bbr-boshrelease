@@ -19,12 +19,31 @@ releases:
   url: https://bosh.io/d/github.com/cloudfoundry/garden-runc-release?v=1.6.0
   sha1: 58fbc64aff303e6d76899441241dd5dacef50cb7
 - name: concourse-bbr # <---- Add 
-  version: 0.3.0
-  url: https://github.com/making/concourse-bbr-boshrelease/releases/download/0.3.0/concourse-bbr-0.3.0.tgz
-  sha1: 1ef264e56c315836051c1c5c675c60427f9320e5
+  version: 0.5.0
+  url: https://github.com/making/concourse-bbr-boshrelease/releases/download/0.5.0/concourse-bbr-0.5.0.tgz
+  sha1: bb4f2c9fd781e32a84fe1386599cfa691adcfeb8
 
 ## ....
 
+
+- name: web
+  instances: 1
+  vm_type: default
+  stemcell: trusty
+  azs: [z1]
+  networks:
+  - name: default
+    static_ips: [((internal_ip))]
+  jobs:
+  - name: atc
+    release: concourse
+    properties:
+      # ...
+  - name: atc-lock # <---- Add 
+    release: concourse-bbr      
+  - name: tsa
+    release: concourse
+    properties: {}
 - name: db
   instances: 1
   vm_type: default
@@ -45,6 +64,12 @@ releases:
     release: concourse-bbr
 
 ## ....
+```
+
+or you can also opsfile as follows:
+
+```
+bosh deploy -d concourse concourse.yml -o concoruse-bbr-ops.yml
 ```
 
 ## Backup Concourse with BBR
