@@ -7,13 +7,13 @@
     sha1: bb4f2c9fd781e32a84fe1386599cfa691adcfeb8
 
 - type: replace
-  path: /instance_groups/jobs/name=atc/jobs/-
+  path: /instance_groups/name=web/jobs/-
   value:
     name: atc-lock
     release: concourse-bbr
 
 - type: replace
-  path: /instance_groups/jobs/name=db/jobs/-
+  path: /instance_groups/name=db/jobs/-
   value:
     name: db-backup
     release: concourse-bbr
