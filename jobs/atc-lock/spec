@@ -1,0 +1,10 @@
+---
+name: atc-lock
+
+templates:
+  pre-backup-lock: bin/bbr/pre-backup-lock
+  post-backup-unlock: bin/bbr/post-backup-unlock
+
+packages: []
+
+properties: {}
