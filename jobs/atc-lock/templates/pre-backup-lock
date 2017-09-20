@@ -3,5 +3,11 @@
 set -e
 
 PATH=/var/vcap/bosh/bin:$PATH
+PID=`cat /var/vcap/sys/run/atc/atc.pid`
 
 monit stop atc
+
+while [ -e /proc/$PID ];do
+  echo "Waiting until process($PID) stops"
+  sleep 1
+done
