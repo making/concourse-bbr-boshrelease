@@ -2,9 +2,9 @@
   path: /releases/-
   value:
     name: concourse-bbr
-    version: 0.5.0
-    url: https://github.com/making/concourse-bbr-boshrelease/releases/download/0.5.0/concourse-bbr-0.5.0.tgz
-    sha1: bb4f2c9fd781e32a84fe1386599cfa691adcfeb8
+    version: 0.5.1
+    url: https://github.com/making/concourse-bbr-boshrelease/releases/download/0.5.1/concourse-bbr-0.5.1.tgz
+    sha1: 1835e9d37645e13396826324f7f1f9ddf8460678 
 
 - type: replace
   path: /instance_groups/name=web/jobs/-
