@@ -1,0 +1,19 @@
+---
+packages: []
+jobs:
+- name: db-backup
+  version: 7e9cc260bf858dda54e7ac9dfa2d062b0bb304fd
+  fingerprint: 7e9cc260bf858dda54e7ac9dfa2d062b0bb304fd
+  sha1: bce75e79b65685cb84ec34df3d13ebd8b84000d1
+- name: atc-lock
+  version: 6b0ced9c317d616692346282946696f1c8d8a521
+  fingerprint: 6b0ced9c317d616692346282946696f1c8d8a521
+  sha1: 5842cfd242318bd6461f4904316a0fb49b803946
+license:
+  version: be735ce3ad08bf74248b5d9aaf7d143030efeced
+  fingerprint: be735ce3ad08bf74248b5d9aaf7d143030efeced
+  sha1: eda7149f613810efb76a225f40537a0f2ffd625e
+commit_hash: 5988d44c
+uncommitted_changes: true
+name: concourse-bbr
+version: 0.5.2
