@@ -2,6 +2,6 @@
 
 set -e
 
-PATH=/var/vcap/packages/postgresql_9.3/bin:$PATH
+PATH=/var/vcap/packages/postgres-unknown/bin:/var/vcap/packages/postgresql_9.3/bin:$PATH
 
 pg_restore --user=atc --format=custom --schema=public --clean --dbname=atc $BBR_ARTIFACT_DIRECTORY/atc.backup 
