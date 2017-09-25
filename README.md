@@ -19,9 +19,9 @@ releases:
   url: https://bosh.io/d/github.com/cloudfoundry/garden-runc-release?v=1.6.0
   sha1: 58fbc64aff303e6d76899441241dd5dacef50cb7
 - name: concourse-bbr # <---- Add 
-  version: 0.5.1
-  url: https://github.com/making/concourse-bbr-boshrelease/releases/download/0.5.1/concourse-bbr-0.5.1.tgz
-  sha1: 1835e9d37645e13396826324f7f1f9ddf8460678 
+  version: 0.5.2
+  url: https://github.com/making/concourse-bbr-boshrelease/releases/download/0.5.2/concourse-bbr-0.5.2.tgz
+  sha1: 8ddeeec141cdab141b2482ef1507d1ce9fd91875 
 ## ....
 
 
